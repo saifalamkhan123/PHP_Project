@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body>
+
+<h1>Simple Calculator</h1>
+
+<form action="calculator.php" method="get">
+
+  <input type="number" name="num1">
+  <input type="number" name="num2">
+  <input type="submit">
+</form>
+
+
+<div>
+
+<?php
+
+if(isset($_GET["num1"]) && isset($_GET["num2"]))
+{
+
+   $num1 = $_GET["num1"];
+   $num2 = $_GET["num2"];
+
+   $sumResult = $num1 + $num2;
+   $subResult = $num1 - $num2;
+   $mulResult = $num1 * $num2;
+   $divResult = $num1 / $num2;
+
+echo "Sum : ".$sumResult; echo "<br/>";
+echo "Sub : ".$subResult; echo "<br/>";
+echo "Mul : ".$mulResult; echo "<br/>";
+echo "Div : ".$divResult; echo "<br/>";
+
+}
+
+?>
+
+</div>
+
+   
+</body>
+</html>
